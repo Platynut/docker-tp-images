@@ -67,6 +67,8 @@ pytest==7.4.0
 
 2. Construire et tester la version `2.0.0`.
 3. Comparer la taille des images `1.0.0` et `2.0.0`.
+`1.0.0`: 51.3MB
+`2.0.0`: 42.3MB
 4. Publier `1.0.0`, `2.0.0` et mettre `latest` sur `2.0.0`.
 
 Les commandes doivent etre fournies dans un fichier separe `COMMANDS.md`.
@@ -74,8 +76,13 @@ Les commandes doivent etre fournies dans un fichier separe `COMMANDS.md`.
 ## Questions de reflexion
 
 - Quelle est la difference de taille entre `1.0.0` et `2.0.0` ?
+C'est du à l'utilisation dans build multistage
+
 - Pourquoi `pytest` ne doit pas rester dans l'image de production ?
+Pour éviter les dépendances non nécessaires
+
 - Comment recuperer explicitement la version `1.0.0` depuis Docker Hub ?
+Il faut spécifier le tag lors du pull
 
 ## Criteres de validation
 
