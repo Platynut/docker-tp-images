@@ -41,8 +41,14 @@ Les commandes doivent etre fournies dans un fichier separe `COMMANDS.md`.
 ## Questions de reflexion
 
 - Pourquoi copier `package.json` avant le reste du code ?
+Ca permet de l'avoir en cache permettant ainsi d'optimiser l'image
+
 - Quelle difference de taille entre `node:18` et `node:18-alpine` ?
+La alpine ne prend pas toutes les dépendances inutiles mais que le nécessaires
+
 - A quoi sert le tag `latest` ?
+Ca permet d'avoir la dernière version de l'image
+
 
 ## Criteres de validation
 
